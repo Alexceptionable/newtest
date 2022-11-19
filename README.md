@@ -1,2 +1,2 @@
 Hello!
-This is a test.
+This is a new sneakers promotion.
