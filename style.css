@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -37,20 +38,43 @@ h1::before {
   letter-spacing: 3px;
 }
 
+.product-image {
+  float: left;
+  margin-right: 40px;
+}
+
+.float-box-two {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  margin-top: 26px;
+}
+
+.float-box-three {
+  float: left;
+  width: 200px;
+  margin-top: 26px;
+}
+
 .price {
   font-size: 24px;
+  float: left;
+  margin-bottom: 20px;
 }
 
 .tag {
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 15px;
   color: #979797;
   font-weight: bold;
   margin-bottom: 15px;
+  float: right;
+  margin-top: 7px;
 }
 
 .product-info {
   margin-bottom: 15px;
+  clear: both;
 }
 
 .info:link,
@@ -119,7 +143,7 @@ h1::before {
 
 h3 {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -130,7 +154,7 @@ h3 {
 }
 
 li {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 
