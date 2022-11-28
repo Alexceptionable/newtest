@@ -38,28 +38,43 @@ h1::before {
   letter-spacing: 3px;
 }
 
-.product-image {
-  float: left;
-  margin-right: 40px;
+.flex-container {
+  display: flex;
+  gap: 40px;
 }
 
-.float-box-two {
+/* .product-image {
   float: left;
+  margin-right: 40px;
+} */
+
+.float-box-two {
+  /* float: left;
   width: 250px;
   margin-right: 40px;
+  margin-top: 26px; */
+  flex: 1;
   margin-top: 26px;
 }
 
 .float-box-three {
-  float: left;
-  width: 200px;
+  /* float: left;
+  width: 200px; */
   margin-top: 26px;
+  flex: 1;
+}
+
+.tag-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex: 1;
 }
 
 .price {
   font-size: 24px;
-  float: left;
-  margin-bottom: 20px;
+  /* float: left; */
 }
 
 .tag {
@@ -67,14 +82,13 @@ h1::before {
   font-size: 15px;
   color: #979797;
   font-weight: bold;
-  margin-bottom: 15px;
-  float: right;
-  margin-top: 7px;
+  /* float: right; */
+  /* margin-top: 7px; */
 }
 
 .product-info {
   margin-bottom: 15px;
-  clear: both;
+  /* clear: both; */
 }
 
 .info:link,
@@ -91,54 +105,44 @@ h1::before {
 
 .color-container {
   margin-bottom: 18px;
+  display: flex;
+  gap: 15px;
 }
 
 .black {
   height: 22px;
   width: 22px;
   background-color: black;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 .blue {
   height: 22px;
   width: 22px;
   background-color: blue;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 .red {
   height: 22px;
   width: 22px;
   background-color: red;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 .yellow {
   height: 22px;
   width: 22px;
   background-color: yellow;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 .green {
   height: 22px;
   width: 22px;
   background-color: green;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 .brown {
   height: 22px;
   width: 22px;
   background-color: brown;
-  display: inline-block;
-  margin-right: 15px;
 }
 
 h3 {

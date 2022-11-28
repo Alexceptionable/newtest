@@ -286,3 +286,120 @@ const shuffle = function (arr) {
 };
 
 console.log(shuffle(arrForShuffle));
+
+const superUser = {
+  name: "John",
+  surname: "Smith",
+};
+
+superUser.name = "Pete";
+
+console.log(superUser);
+
+const isEmptyObj = function (obj) {
+  for (let key in obj) {
+    return false;
+  }
+  return true;
+};
+
+console.log(isEmptyObj(superUser));
+
+let newSalaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+let newSum = 0;
+
+for (let key in newSalaries) {
+  newSum += newSalaries[key];
+}
+
+console.log(newSum);
+
+let newMenu = {
+  width: 200,
+  height: 300,
+  title: "My menu",
+};
+
+const multiplyNumericObj = function (obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == "number") {
+      obj[key] *= 2;
+    }
+  }
+};
+
+multiplyNumericObj(newMenu);
+
+console.log(newMenu);
+
+const newMusic = ["Jazz", "BLues"];
+
+newMusic.push("Rock-n-Roll");
+
+console.log(newMusic);
+
+newMusic[Math.floor((newMusic.length - 1) / 2)] = "Classics";
+
+console.log(newMusic);
+
+console.log(newMusic.shift());
+console.log(newMusic);
+
+newMusic.unshift("Rap", "Reggie");
+console.log(newMusic);
+
+const newSumInput = function () {
+  let newObj = [];
+  while (true) {
+    let value = prompt("Please enter a number");
+    if (isNaN(value) || value === "") break;
+    newObj.push(+value);
+  }
+
+  let sum = 0;
+  for (let number in newObj) {
+    sum += newObj[number];
+  }
+  return sum;
+};
+
+const superArr = [1, -2, 3, 4, -9, 6];
+
+const getMaxSum = function (arr) {
+  let partialSum = 0;
+  let maxSum = 0;
+  for (let i of arr) {
+    partialSum += i;
+    maxSum = Math.max(maxSum, partialSum);
+    if (partialSum < 0) partialSum = 0;
+  }
+  return maxSum;
+};
+
+console.log(getMaxSum(superArr));
+
+// const newCamelize = function (str) {
+//   let result = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i - 1] === "-") {
+//       result = `${result}${str[i].toUpperCase()}`;
+//     } else {
+//       result = `${result}${str[i]}`;
+//     }
+//   }
+//   return result.replace(/-/g, "");
+// };
+
+const newCamelize = function (str) {
+  return str
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join("");
+};
