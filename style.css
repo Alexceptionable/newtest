@@ -14,6 +14,14 @@ body {
   border: 4px solid black;
   width: 825px;
   margin: 50px auto;
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+
+header {
+  grid-column: 1 / -1;
 }
 
 h1 {
@@ -38,10 +46,10 @@ h1::before {
   letter-spacing: 3px;
 }
 
-.flex-container {
+/* .flex-container {
   display: flex;
   gap: 40px;
-}
+} */
 
 /* .product-image {
   float: left;
@@ -53,15 +61,15 @@ h1::before {
   width: 250px;
   margin-right: 40px;
   margin-top: 26px; */
-  flex: 1;
-  margin-top: 26px;
+  /* flex: 1;
+  margin-top: 26px; */
 }
 
 .float-box-three {
   /* float: left;
   width: 200px; */
-  margin-top: 26px;
-  flex: 1;
+  /* margin-top: 26px;
+  flex: 1; */
 }
 
 .tag-price {
@@ -164,6 +172,10 @@ li {
 
 li:last-child {
   margin-bottom: none;
+}
+
+footer {
+  grid-column: 1 / -1;
 }
 
 button {

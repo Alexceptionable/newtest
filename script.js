@@ -403,3 +403,145 @@ const newCamelize = function (str) {
     )
     .join("");
 };
+
+const newfilterRange = function (arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < a || arr[i] > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+};
+
+let superNewArr2 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+newfilterRange(superNewArr2, 3, 5);
+
+console.log(superNewArr2);
+
+superNewArr2.sort((a, b) => b - a);
+
+console.log(superNewArr2);
+
+let vasya4 = { name: "Вася", age: 25 };
+let petya4 = { name: "Петя", age: 30 };
+let masha4 = { name: "Маша", age: 28 };
+
+let users4 = [vasya, petya, masha];
+
+let names4 = users4.map((item) => item.name);
+
+console.log(names4);
+
+let vasya5 = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya5 = { name: "Петя", surname: "Иванов", id: 2 };
+let masha5 = { name: "Маша", surname: "Петрова", id: 3 };
+
+let users5 = [vasya, petya, masha];
+
+let usersMapped5 = users5.map((user) => ({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id,
+}));
+
+console.log(usersMapped5);
+
+let vasya6 = { name: "Вася", age: 25 };
+let petya6 = { name: "Петя", age: 30 };
+let masha6 = { name: "Маша", age: 28 };
+
+let arr6 = [vasya6, petya6, masha6];
+
+const sortByAge2 = function (arr) {
+  arr.sort((a, b) => a.age - b.age);
+};
+
+sortByAge2(arr6);
+
+console.log(arr6);
+
+const superShuffle = function (arr) {
+  return arr
+    .map((item) => [Math.random(), item])
+    .sort()
+    .map((item) => item[1]);
+};
+
+let randomNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+console.log(randomNumbers);
+console.log(superShuffle(randomNumbers));
+
+let vasya7 = { name: "Вася", age: 25 };
+let petya7 = { name: "Петя", age: 30 };
+let masha7 = { name: "Маша", age: 29 };
+
+let arr88 = [vasya7, petya7, masha7];
+
+const getAverageAge = function (arr) {
+  return arr.reduce((sumAge, item) => sumAge + item.age, 0) / arr.length;
+};
+
+console.log(getAverageAge(arr88));
+
+const unique = function (arr) {
+  let result = [];
+
+  for (let i of arr) {
+    if (!result.includes(i)) {
+      result.push(i);
+    }
+  }
+  return result;
+};
+
+let strings = [
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
+];
+
+console.log(unique(strings));
+
+function groupById(array) {
+  return array.reduce((obj, value) => {
+    obj[value.id] = value;
+    return obj;
+  }, {});
+}
+
+let users111 = [
+  { id: "john", name: "John Smith", age: 20 },
+  { id: "ann", name: "Ann Smith", age: 24 },
+  { id: "pete", name: "Pete Peterson", age: 31 },
+];
+
+let usersById = groupById(users111);
+
+console.log(usersById);
+
+console.log(323);
+console.log(323);
+console.log(3323);
+console.log(3444);
+
+console.log(usersById);
+console.log("hey!");
+
+const forecast = [14, 15, 1, -5, 6, 8, 9];
+
+const printForecast = function (arr) {
+  let day = 1;
+  for (let i of arr) {
+    console.log(`${i}${"C in "}${day}${" days... "}`);
+    day++;
+  }
+};
+
+printForecast(forecast);
